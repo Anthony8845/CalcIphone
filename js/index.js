@@ -86,7 +86,7 @@ btn.addEventListener('click', (event) => {
         
         console.log(b)
 
-        out.textContent = b;
+        out.textContent = b.toFixed(3).replace(/0*$/, '');
       } 
       
     }
@@ -121,12 +121,12 @@ btn.addEventListener('click', (event) => {
     finish = true;
     
 
-    if (Number.isInteger(a)) {
+    if (Number.isInteger(a) ) {
       out.textContent = a;
     }else{
-      let result = Number(a);
+      let result = a;
       
-      out.textContent = result.toFixed(3);
+      out.textContent = result.toFixed(3).replace(/0*$/, '');
     }
     
     
